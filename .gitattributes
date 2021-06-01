@@ -1,0 +1,144 @@
+########################################################################
+# Generated using https://rehansaeed.com/gitattributes-best-practices/ #
+########################################################################
+
+
+
+# Line Ending Normalisation:
+
+*     text=auto
+
+# Source files:
+
+*.pxd    text diff=python
+*.py     text diff=python
+*.py3    text diff=python
+*.pyw    text diff=python
+*.pyx    text diff=python
+*.pyz    text diff=python
+*.ipynb  text
+*.ts     text
+*.du     text
+
+*.go    -text diff=golang
+
+################
+# Binary files #
+################
+
+# Python:
+*.db     binary
+*.p      binary
+*.pkl    binary
+*.pickle binary
+*.pyc    binary
+*.pyd    binary
+*.pyo    binary
+
+# Graphics:
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.ico      binary
+*.pdf      binary
+*.psb      binary
+# SVG treated as an asset (binary) by default.
+*.svg      text
+*.webp     binary
+
+# Archives:
+*.7z       binary
+*.gz       binary
+*.tar      binary
+*.tgz      binary
+*.zip      binary
+
+# Documentation
+*.ipynb           text
+*.markdown        text
+*.md              text
+*.mdwn            text
+*.mdown           text
+*.mkd             text
+*.mkdn            text
+*.mdtxt           text
+*.mdtext          text
+*.txt             text
+AUTHORS           text
+CHANGELOG         text
+CHANGES           text
+CONTRIBUTING      text
+COPYING           text
+copyright         text
+*COPYRIGHT*       text
+INSTALL           text
+license           text
+LICENSE           text
+NEWS              text
+readme            text
+*README*          text
+TODO              text
+*.doc	        diff=astextplain
+*.DOC	        diff=astextplain
+*.docx          diff=astextplain
+*.DOCX          diff=astextplain
+*.dot           diff=astextplain
+*.DOT           diff=astextplain
+*.pdf           diff=astextplain
+*.PDF           diff=astextplain
+*.rtf           diff=astextplain
+*.RTF	        diff=astextplain
+*.tex      text diff=tex
+*.adoc     text
+*.textile  text
+*.mustache text
+*.csv      text
+*.tab      text
+*.tsv      text
+*.txt      text
+*.sql      text
+
+# Force batch scripts to always use CRLF line endings so that if a repo is accessed
+# in Windows via a file share from Linux, the scripts will work.
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+
+# Force bash scripts to always use LF line endings so that if a repo is accessed
+# in Unix via a file share from Windows, the scripts will work.
+*.sh text eol=lf
+
+# Executables
+*.exe             binary
+*.pyc             binary
+
+# Serialisation
+*.json     text
+*.toml     text
+*.xml      text
+*.yaml     text
+*.yml      text
+
+# Vim:
+*.vim text eol=lf
+.vimrc text eol=lf
+
+# RC files (like .babelrc or .eslintrc)
+*.*rc             text
+
+# Docker
+Dockerfile        text
+
+# Heroku
+Procfile          text
+
+# Text files where line endings should be preserved
+*.patch    -text
+
+
+# Exclude files from exporting:
+.gitattributes export-ignore
+.gitignore     export-ignore
+
+# Enable syntax highlighting for files with `.gitattributes` extensions.
+*.gitattributes linguist-language=gitattributes
